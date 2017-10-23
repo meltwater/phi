@@ -1,145 +1,27 @@
-# Node.js npm Package Skeleton
+# Phi JavaScript Functional Tools
 
-[![npm](https://img.shields.io/badge/npm-%40meltwater%2Fmakenew--node--lib-blue.svg)](https://www.npmjs.com/package/@meltwater/makenew-node-lib)
-[![github](https://img.shields.io/badge/github-repo-blue.svg)](https://github.com/meltwater/makenew-node-lib)
-[![docs](https://img.shields.io/badge/docs-master-green.svg)](https://github.com/meltwater/makenew-node-lib/tree/master/docs)
-[![Codecov](https://img.shields.io/codecov/c/token/eHEIOjPT5u/github/meltwater/makenew-node-lib.svg)](https://codecov.io/gh/meltwater/makenew-node-lib)
-[![CircleCI](https://circleci.com/gh/meltwater/makenew-node-lib.svg?style=shield&circle-token=30395fe910ca2b9f7553c6311e85bd8ebe1ee059)](https://circleci.com/gh/meltwater/makenew-node-lib)
+[![npm](https://img.shields.io/badge/npm-%40meltwater%2Fphi-blue.svg)](https://www.npmjs.com/package/@meltwater/phi)
+[![github](https://img.shields.io/badge/github-repo-blue.svg)](https://github.com/meltwater/phi)
+[![docs](https://img.shields.io/badge/docs-master-green.svg)](https://github.com/meltwater/phi/tree/master/docs)
+[![Codecov](https://img.shields.io/codecov/c/token/wAO5u1ZoHJ/github/meltwater/phi.svg)](https://codecov.io/gh/meltwater/phi)
+[![CircleCI](https://circleci.com/gh/meltwater/phi.svg?style=shield&circle-token=ff44b41e4bcb9fce3a687f1a33b316390bb9cd0a)](https://circleci.com/gh/meltwater/phi)
 
 ## Description
 
-Bootstrap a new [Node.js] [npm package] in five minutes or less.
-
-[Node.js]: https://nodejs.org/
-[npm package]: https://docs.npmjs.com/how-npm-works/packages
-
-### Features
-
-- [Node.js]'s [npm] package structure.
-- Fast, reliable, and secure dependency management with [Yarn].
-- Next generation JavaScript with [Babel].
-- Write debuggable examples with configurable options and arguments.
-- Linting with the [JavaScript Standard Style] and [JSON Lint].
-- Automatically lint on changes with [gulp].
-- Futuristic debuggable unit testing with [AVA].
-- Code coverage reporting with [Istanbul], [nyc], and [Codecov].
-- Continuous testing and automated package publishing with [CircleCI].
-- [Keep a CHANGELOG].
-- Consistent coding with [EditorConfig].
-- Badges from [Shields.io].
-
-[AVA]: https://github.com/avajs/ava
-[Babel]: https://babeljs.io/
-[CircleCI]: https://circleci.com/
-[Codecov]: https://codecov.io/
-[EditorConfig]: http://editorconfig.org/
-[gulp]: http://gulpjs.com/
-[Keep a CHANGELOG]: http://keepachangelog.com/
-[Istanbul]: https://istanbul.js.org/
-[JavaScript Standard Style]: http://standardjs.com/
-[JSON Lint]: https://github.com/zaach/jsonlint
-[Node.js]: https://nodejs.org/
-[npm]: https://www.npmjs.com/
-[nyc]: https://github.com/istanbuljs/nyc
-[Shields.io]: http://shields.io/
-[Yarn]: https://yarnpkg.com/
-
-### Bootstrapping a new project
-
-1. Clone the master branch of this repository with
-
-   ```
-   $ git clone --single-branch git@github.com:meltwater/makenew-node-lib.git <new-node-lib>
-   $ cd <new-node-lib>
-   ```
-
-   Optionally, reset to the latest version with
-
-   ```
-   $ git reset --hard <version-tag>
-   ```
-
-2. Create an empty (**non-initialized**) repository on GitHub.
-
-3. Run
-
-   ```
-   $ ./makenew.sh
-   ```
-
-   This will replace the boilerplate, delete itself,
-   remove the git remote, remove upstream tags,
-   and stage changes for commit.
-
-4. Create the required CircleCI environment variables with
-
-   ```
-   $ .circleci/envvars.sh
-   ```
-
-5. Review, commit, and push the changes to GitHub with
-
-   ```
-   $ git diff --cached
-   $ git commit -m "Replace makenew boilerplate"
-   $ git remote add origin git@github.com:meltwater/<new-node-lib>.git
-   $ git push -u origin master
-   ```
-
-6. Ensure the CircleCI build passes,
-   then publish the initial version of the package with
-
-   ```
-   $ nvm install
-   $ yarn
-   $ npm version patch
-   ```
-
-7. Update the GitHub branch protection options for `master`
-   to require all status checks to pass.
-   Disable the GitHub repository projects and wiki options (unless desired).
-   Add any required GitHub teams or collaborators to the repository.
-
-8. Search for all `TODO` comments to add your first module.
-
-### Updating from this skeleton
-
-If you want to pull in future updates from this skeleton,
-you can fetch and merge in changes from this repository.
-
-Add this as a new remote with
-
-```
-$ git remote add upstream git@github.com:meltwater/makenew-node-lib.git
-```
-
-You can then fetch and merge changes with
-
-```
-$ git fetch --no-tags upstream
-$ git merge upstream/master
-```
-
-#### Changelog for this skeleton
-
-Note that `CHANGELOG.md` is just a template for this skeleton.
-The actual changes for this project are documented in the commit history
-and summarized under [Releases].
-
-[Releases]: https://github.com/meltwater/makenew-node-lib/releases
+Functional tools for JavaScript and Node.js.
 
 ## Installation
 
 Add this as a dependency to your project using [npm] with
 
 ```
-$ npm install @meltwater/makenew-node-lib
+$ npm install @meltwater/phi
 ```
 
 or using [Yarn] with
 
 ```
-$ yarn add @meltwater/makenew-node-lib
+$ yarn add @meltwater/phi
 ```
 
 [npm]: https://www.npmjs.com/
@@ -154,7 +36,7 @@ $ yarn add @meltwater/makenew-node-lib
 This package provides an async function which checks if its argument is true.
 
 ```js
-import isTrue from '@meltwater/makenew-node-lib'
+import isTrue from '@meltwater/phi'
 
 const logTrue = async () => {
   const trueValue = await isTrue(true)
@@ -168,8 +50,8 @@ logTrue().catch(err => { console.log(err) })
 ## Development Quickstart
 
 ```
-$ git clone https://github.com/meltwater/makenew-node-lib.git
-$ cd makenew-node-lib
+$ git clone https://github.com/meltwater/phi.git
+$ cd phi
 $ nvm install
 $ yarn
 ```
@@ -185,14 +67,14 @@ $ yarn run watch:test
 
 ### Source code
 
-The [makenew-node-lib source] is hosted on GitHub.
+The [phi source] is hosted on GitHub.
 Clone the project with
 
 ```
-$ git clone git@github.com:meltwater/makenew-node-lib.git
+$ git clone git@github.com:meltwater/phi.git
 ```
 
-[makenew-node-lib source]: https://github.com/meltwater/makenew-node-lib
+[phi source]: https://github.com/meltwater/phi
 
 ### Requirements
 

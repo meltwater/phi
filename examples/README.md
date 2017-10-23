@@ -99,7 +99,7 @@ by any package which imports them._
 Create and run an example with
 
 ```js
-import { createExample } from '@meltwater/makenew-node-lib'
+import { createExample } from '@meltwater/phi'
 
 // createExample(exampleName, options)(...args)
 createExample('is-true')()
@@ -111,7 +111,7 @@ or import them directly with
 
 ```js
 import createLogger from 'bunyan'
-import { examples } from '@meltwater/makenew-node-lib'
+import { examples } from '@meltwater/phi'
 
 const isTrue = examples.isTrue({log: createLogger()})
 
