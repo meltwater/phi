@@ -94,6 +94,8 @@
     "node": ">=6.9.5"
   },
   "dependencies": {
+    "ramda": "^0.25.0",
+    "ramda-adjunct": "^1.18.0",
     "util.promisify": "^1.0.0"
   },
   "devDependencies": {
