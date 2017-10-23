@@ -95,8 +95,7 @@
   },
   "dependencies": {
     "ramda": "^0.25.0",
-    "ramda-adjunct": "^1.18.0",
-    "util.promisify": "^1.0.0"
+    "ramda-adjunct": "^1.18.0"
   },
   "devDependencies": {
     "@meltwater/examplr": "^1.0.0",
