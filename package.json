@@ -1,6 +1,6 @@
 {
   "name": "@meltwater/phi",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Functional tools for JavaScript and Node.js.",
   "main": "./dist/index.js",
   "module": "./index.js",
