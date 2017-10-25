@@ -105,30 +105,12 @@ workflows:
   version: 2
   default:
     jobs:
-      - node-8:
-          filters:
-            branches:
-              ignore: /^gh-pages/
-      - node-8-alpine:
-          filters:
-            branches:
-              ignore: /^gh-pages/
-      - node-7:
-          filters:
-            branches:
-              ignore: /^gh-pages/
-      - node-7-alpine:
-          filters:
-            branches:
-              ignore: /^gh-pages/
-      - node-boron:
-          filters:
-            branches:
-              ignore: /^gh-pages/
-      - node-boron-alpine:
-          filters:
-            branches:
-              ignore: /^gh-pages/
+      - node-8
+      - node-8-alpine
+      - node-7
+      - node-7-alpine
+      - node-boron
+      - node-boron-alpine
       - publish:
           filters:
             branches:

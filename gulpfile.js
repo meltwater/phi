@@ -103,7 +103,7 @@ gulp.task('publish-docs', ['doc-version'], (done) => {
     add: true,
     clone: '.gh-pages',
     depth: 2,
-    message: `Publish docs for v${pkg.version}`,
+    message: `Publish docs for v${pkg.version} [ci skip]`,
     user: {
       name: pkg.author.name,
       email: pkg.author.email
