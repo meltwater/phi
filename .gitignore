@@ -6,6 +6,7 @@
 # https://github.com/github/gitignore
 
 # Build directories
+.gh-pages
 dist
 docs
 package

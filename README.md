@@ -113,6 +113,11 @@ The following environment variables must be set on [CircleCI]:
 
 These may be set manually or by running the script `./circleci/envvars.sh`.
 
+##### Documentation
+
+For documentation publishing, CircleCI must have an SSH key for `github.com`
+added as a deploy key with write access on the GitHub repository.
+
 [CircleCI]: https://circleci.com/
 
 ### Development tasks
