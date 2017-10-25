@@ -1,11 +1,13 @@
 {
   "name": "@meltwater/phi",
   "version": "0.1.2",
-  "description": "Functional tools for JavaScript and Node.js.",
+  "description": "Functional tools for JavaScript inspired by Ramda and Ramda Adjunct.",
   "main": "./dist/index.js",
   "module": "./index.js",
   "keywords": [
     "meltwater",
+    "ramda",
+    "ramda adjunct",
     "node"
   ],
   "homepage": "https://github.com/meltwater/phi",
@@ -22,8 +24,7 @@
     "lib",
     "data",
     "examples",
-    "dist",
-    "docs"
+    "dist"
   ],
   "scripts": {
     "test": "nyc ava",
@@ -34,6 +35,7 @@
     "build:index": "babel --source-maps --out-dir ./dist ./index.js",
     "build:lib": "babel --source-maps --ignore='*.spec.js' --out-dir ./dist/lib ./lib",
     "build:examples": "babel --source-maps --out-dir ./dist/examples ./examples",
+    "build:docs": "jsdoc -c jsdoc.json",
     "dist": "yarn run build",
     "predist": "yarn test",
     "package": "npm pack",
@@ -81,6 +83,7 @@
     "exclude": [
       "**/index.js",
       "dist/**/*.js",
+      "docs/**/*.js",
       "examples/**/*.js",
       "**/*.spec.js"
     ],
@@ -93,9 +96,9 @@
   "engines": {
     "node": ">=6.9.5"
   },
-  "dependencies": {
-    "ramda": "^0.25.0",
-    "ramda-adjunct": "^1.18.0"
+  "peerDependencies": {
+    "ramda": ">= 0.19.0 <= 0.25.0",
+    "ramda-adjunct": ">= 1.18.0 <= 0.19.0"
   },
   "devDependencies": {
     "@meltwater/examplr": "^1.0.0",
@@ -105,6 +108,7 @@
     "babel-preset-stage-3": "^6.17.0",
     "babel-watch": "^2.0.7",
     "del-cli": "^1.0.0",
+    "docdash": "^0.4.0",
     "gulp": "^3.9.1",
     "gulp-cli": "^1.2.2",
     "gulp-jsonlint": "^1.1.2",
@@ -113,6 +117,7 @@
     "gulp-standard": "^10.0.0",
     "gulp-watch": "^4.3.10",
     "gulplog": "^1.0.0",
+    "jsdoc": "^3.5.5",
     "nodemon": "^1.11.0",
     "npm-run-all": "^4.0.0",
     "nyc": "^11.0.2",

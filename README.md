@@ -2,50 +2,45 @@
 
 [![npm](https://img.shields.io/badge/npm-%40meltwater%2Fphi-blue.svg)](https://www.npmjs.com/package/@meltwater/phi)
 [![github](https://img.shields.io/badge/github-repo-blue.svg)](https://github.com/meltwater/phi)
-[![docs](https://img.shields.io/badge/docs-master-green.svg)](https://github.com/meltwater/phi/tree/master/docs)
+[![docs](https://img.shields.io/badge/docs-master-green.svg)](https://phi.meltwaterlabs.com)
 [![Codecov](https://img.shields.io/codecov/c/token/wAO5u1ZoHJ/github/meltwater/phi.svg)](https://codecov.io/gh/meltwater/phi)
 [![CircleCI](https://circleci.com/gh/meltwater/phi.svg?style=shield&circle-token=ff44b41e4bcb9fce3a687f1a33b316390bb9cd0a)](https://circleci.com/gh/meltwater/phi)
 
 ## Description
 
-Functional tools for JavaScript and Node.js.
+Functional tools for JavaScript inspired by [Ramda] and [Ramda Adjunct].
 
 ## Installation
 
-Add this as a dependency to your project using [npm] with
+Add this, [Ramda], and [Ramda Adjunct]
+as dependencies to your project using [npm] with
 
 ```
-$ npm install @meltwater/phi
+$ npm install ramda ramda-adjunct @meltwater/phi
 ```
 
 or using [Yarn] with
 
 ```
-$ yarn add @meltwater/phi
+$ yarn add ramda ramda-adjunct @meltwater/phi
 ```
 
+[Ramda]: http://ramdajs.com/
+[Ramda Adjunct]: https://char0n.github.io/ramda-adjunct
 [npm]: https://www.npmjs.com/
 [Yarn]: https://yarnpkg.com/
 
 ## Usage
 
-<!--- TODO: Update usage example for added module(s). -->
-
-**See the complete [API documentation](./docs) and [working examples](./examples).**
-
-This package provides an async function which checks if its argument is true.
+**See the complete [API documentation] and [working examples](./examples).**
 
 ```js
-import isTrue from '@meltwater/phi'
+import { isNonEmptyString } from '@meltwater/phi'
 
-const logTrue = async () => {
-  const trueValue = await isTrue(true)
-  console.log(trueValue)
-}
-
-logTrue().catch(err => { console.log(err) })
-// true
+isNonEmptyString('phi') //=> true
 ```
+
+[API documentation]: https://phi.meltwaterlabs.com
 
 ## Development Quickstart
 
