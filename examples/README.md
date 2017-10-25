@@ -1,7 +1,5 @@
 # Examples
 
-<!--- TODO: Update all uses of is-true and isTrue with added example. -->
-
 ## Running Examples Locally
 
 ### Local configuration
@@ -29,25 +27,25 @@ $ yarn run example
 Run provided examples with, e.g.,
 
 ```
-$ yarn run example is-true | yarn run bunyan
+$ yarn run example string | yarn run bunyan
 ```
 
 or more compactly with, e.g.,
 
 ```
-$ yarn example is-true | yarn bunyan
+$ yarn example string | yarn bunyan
 ```
 
 Pass arguments to examples with
 
 ```
-$ yarn run example is-true false | yarn bunyan
+$ yarn run example string false | yarn bunyan
 ```
 
 Automatically watch and rerun an example on changes with, e.g.,
 
 ```
-$ yarn run example:watch is-true | yarn run bunyan
+$ yarn run example:watch string | yarn run bunyan
 ```
 
 #### Debugging examples
@@ -55,7 +53,7 @@ $ yarn run example:watch is-true | yarn run bunyan
 Debug examples with, e.g.,
 
 ```
-$ yarn run example:inspect is-true | yarn run bunyan
+$ yarn run example:inspect string | yarn run bunyan
 ```
 
 For examples which run a single process and then exit,
@@ -72,7 +70,7 @@ export default ({log}) => async () => {
 Automatically watch and rerun a debuggable example on changes with, e.g.,
 
 ```
-$ yarn run example:inspect:watch is-true | yarn run bunyan
+$ yarn run example:inspect:watch string | yarn run bunyan
 ```
 
 ### Shell function aliases for running examples
@@ -102,7 +100,7 @@ Create and run an example with
 import { createExample } from '@meltwater/phi'
 
 // createExample(exampleName, options)(...args)
-createExample('is-true')()
+createExample('string')()
   .then(data => { console.log(data) })
   .catch(err => { console.error(err) })
 ```
@@ -113,9 +111,9 @@ or import them directly with
 import createLogger from 'bunyan'
 import { examples } from '@meltwater/phi'
 
-const isTrue = examples.isTrue({log: createLogger()})
+const string = examples.string({log: createLogger()})
 
-isTrue()
+string()
   .then(data => { console.log(data) })
   .catch(err => { console.error(err) })
 ```

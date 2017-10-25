@@ -4,10 +4,10 @@ import path from 'path'
 
 import createExamples from '@meltwater/examplr'
 
-import isTrue from './is-true' // TODO: Replace this with added example.
+import string from './string'
 
 export const examples = {
-  isTrue // TODO: Replace this with added example.
+  string
 }
 
 const envVars = [
