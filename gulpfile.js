@@ -83,11 +83,10 @@ gulp.task('doc-version', (done) => {
     fs.readFileSync(path.resolve(__dirname, 'package.json'))
   )
 
-  const docs = `${paths.docs}/${pkg.name}`
-
-  return gulp.src([`${docs}/index.html`])
+  return gulp.src(['.doc.index.html'])
     .pipe($.replace('--version--', pkg.version))
-    .pipe(gulp.dest(docs))
+    .pipe($.rename('index.html'))
+    .pipe(gulp.dest(`${paths.docs}/${pkg.name}`))
 })
 
 gulp.task('publish-docs', ['doc-version'], (done) => {
