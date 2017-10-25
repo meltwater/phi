@@ -42,7 +42,7 @@ references:
       - save_cache:
           key: module-cache-{{ arch }}-{{ checksum ".versions" }}-{{ checksum "yarn.lock" }}
           paths: node_modules
-     - save_cache:
+      - save_cache:
           key: gh-pages-cache-{{ checksum ".versions" }}-{{ epoch }}
           paths: .gh-pages
       - run:
