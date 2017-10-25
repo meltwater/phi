@@ -1,4 +1,4 @@
-# Phi JavaScript Functional Tools
+# φ
 
 [![npm](https://img.shields.io/badge/npm-%40meltwater%2Fphi-blue.svg)](https://www.npmjs.com/package/@meltwater/phi)
 [![github](https://img.shields.io/badge/github-repo-blue.svg)](https://github.com/meltwater/phi)
