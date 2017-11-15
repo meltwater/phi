@@ -38,7 +38,7 @@
     "predist": "yarn test",
     "preversion": "yarn run dist",
     "postversion": "git push && git push --tags",
-    "prepublishOnly": "gulp publish-docs",
+    "publish:docs": "gulp publish-docs",
     "example": "babel-node examples",
     "example:watch": "babel-watch --watch examples/local.json examples",
     "example:inspect": "babel-node --inspect examples",
