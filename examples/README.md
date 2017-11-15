@@ -8,13 +8,15 @@ Set required and optional configuration options in `examples/local.json`, e.g.,
 
 ```json
 {
-  "logLevel": "debug"
+  "logLevel": "info",
+  "logOutputMode": "short"
 }
 ```
 
 Override any option with the corresponding environment variable:
 
 - `LOG_LEVEL` (optional)
+- `LOG_OUTPUT_MODE` (optional)
 
 ### Running examples with arguments
 
@@ -27,25 +29,19 @@ $ yarn run example
 Run provided examples with, e.g.,
 
 ```
-$ yarn run example string | yarn run bunyan
-```
-
-or more compactly with, e.g.,
-
-```
-$ yarn example string | yarn bunyan
+$ yarn run example string
 ```
 
 Pass arguments to examples with
 
 ```
-$ yarn run example string false | yarn bunyan
+$ yarn run example string false
 ```
 
 Automatically watch and rerun an example on changes with, e.g.,
 
 ```
-$ yarn run example:watch string | yarn run bunyan
+$ yarn run example:watch string
 ```
 
 #### Debugging examples
@@ -53,7 +49,7 @@ $ yarn run example:watch string | yarn run bunyan
 Debug examples with, e.g.,
 
 ```
-$ yarn run example:inspect string | yarn run bunyan
+$ yarn run example:inspect string
 ```
 
 For examples which run a single process and then exit,
@@ -70,52 +66,7 @@ export default ({log}) => async () => {
 Automatically watch and rerun a debuggable example on changes with, e.g.,
 
 ```
-$ yarn run example:inspect:watch string | yarn run bunyan
-```
-
-### Shell function aliases for running examples
-
-In bash or zsh, you may define convenience functions for the above with
-
-```bash
-yrx () { yarn run example $@ | yarn run bunyan; }
-yrxw () { yarn run example:watch $@ | yarn run bunyan; }
-yrxi () { yarn run example:inspect $@ | yarn run bunyan; }
-yrxiw () { yarn run example:inspect:watch $@ | yarn run bunyan; }
-```
-
-## Importing Examples as Modules
-
-All examples are included with this package as importable modules.
-
-_Imported examples are not supported as a stable API._
-
-_Examples use some devDependencies
-which need to be installed as dependencies
-by any package which imports them._
-
-Create and run an example with
-
-```js
-import { createExample } from '@meltwater/phi'
-
-// createExample(exampleName, options)(...args)
-createExample('string')()
-  .then(data => { console.log(data) })
-  .catch(err => { console.error(err) })
-```
-
-or import them directly with
-
-```js
-import createLogger from 'bunyan'
-import { examples } from '@meltwater/phi'
-
-const string = examples.string({log: createLogger()})
-
-string()
-  .then(data => { console.log(data) })
-  .catch(err => { console.error(err) })
+$ yarn run example:inspect:watch string
 ```
 
 ## Writing New Examples

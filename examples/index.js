@@ -1,5 +1,3 @@
-import 'source-map-support/register'
-
 import path from 'path'
 
 import createExamples from '@meltwater/examplr'
@@ -11,21 +9,20 @@ export const examples = {
 }
 
 const envVars = [
-  'LOG_LEVEL'
+  'LOG_LEVEL',
+  'LOG_OUTPUT_MODE'
 ]
 
 const defaultOptions = {}
 
-const { createExample, runExample } = createExamples({
-  examples,
-  envVars,
-  defaultOptions
-})
-
 if (require.main === module) {
+  const { runExample } = createExamples({
+    examples,
+    envVars,
+    defaultOptions
+  })
+
   runExample({
     local: path.resolve(__dirname, 'local.json')
   })
 }
-
-export default createExample
