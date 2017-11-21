@@ -96,7 +96,7 @@ gulp.task('publish-docs', ['doc-version'], (done) => {
 
   const docs = path.resolve(__dirname, paths.docs, pkg.name)
 
-  return ghpages.publish(docs, {
+  ghpages.publish(docs, {
     repo: `git@github.com:${pkg.repository}.git`,
     branch: 'gh-pages',
     add: true,
