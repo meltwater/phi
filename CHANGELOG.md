@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 
 - `mapPath`: Maps over the value at the end of a path.
+- `sleepP`: Returns a promise which resolves after the specified number of milliseconds.
 
 ## 1.0.0 / 2017-11-20
 
