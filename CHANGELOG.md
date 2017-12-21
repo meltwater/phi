@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 
+- `findMin` and `findMax`: Finds the minimum or maximum value in a list.
 - `mapPath`: Maps over the value at the end of a path.
 - `sleeP`: Returns a promise which resolves after the specified number of milliseconds.
 - `sortByPath`: Sorts the list by the supplied property path.
