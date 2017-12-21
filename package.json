@@ -68,7 +68,8 @@
   "ava": {
     "files": [
       "**/*.spec.js",
-      "!dist/**/*"
+      "!dist/**/*",
+      "!package/**/*"
     ],
     "require": [
       "babel-register"
@@ -83,6 +84,7 @@
       "**/index.js",
       "dist/**/*.js",
       "docs/**/*.js",
+      "package/**/*.js",
       "examples/**/*.js",
       "**/*.spec.js"
     ],
@@ -101,7 +103,7 @@
   },
   "devDependencies": {
     "@meltwater/examplr": "^3.0.0",
-    "ava": "^0.23.0",
+    "ava": "^0.24.0",
     "babel-cli": "^6.18.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.1.4",
