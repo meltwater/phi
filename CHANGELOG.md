@@ -11,6 +11,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - `entries`: Shortcut for `Object.entries`.
 - `findMin` and `findMax`: Finds the minimum or maximum value in a list.
+- `ifEqDefaultTo`: Returns the second argument if the third argument
+  is equal (in `R.equals` terms) to the first argument,
+  otherwise returns the third argument.
 - `mapPath`: Maps over the value at the end of a path.
 - `sleeP`: Returns a promise which resolves after the specified number of milliseconds.
 - `sortByPath`: Sorts the list by the supplied property path.
