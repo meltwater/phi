@@ -15,6 +15,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   is equal (in `R.equals` terms) to the first argument,
   otherwise returns the third argument.
 - `mapPath`: Maps over the value at the end of a path.
+- `nOf`: Returns an array of length n filled with the value provided.
+- `objOfKeys`: Returns an object containing the provided keys
+   with all keys assigned the same provided value.
 - `sleeP`: Returns a promise which resolves after the specified number of milliseconds.
 - `sortByPath`: Sorts the list by the supplied property path.
 - `sortByProp`: Sorts the list by the supplied property.
