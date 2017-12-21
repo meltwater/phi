@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - `mapPath`: Maps over the value at the end of a path.
 - `sleeP`: Returns a promise which resolves after the specified number of milliseconds.
+- `sortByProp`: Sorts the list by the supplied property.
 
 ## 1.0.0 / 2017-11-20
 
