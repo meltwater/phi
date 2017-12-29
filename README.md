@@ -250,7 +250,7 @@ To submit a patch:
 
 ## License
 
-This npm package is Copyright (c) 2016-2017 Meltwater Group.
+This npm package is Copyright (c) 2016-2018 Meltwater Group.
 
 ## Warranty
 
