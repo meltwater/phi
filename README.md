@@ -10,6 +10,10 @@
 
 Functional tools for JavaScript inspired by [Ramda] and [Ramda Adjunct].
 
+Exports all [Ramda] and [Ramda Adjunct] functions along
+with the custom functions defined in this package
+so they all may be imported from the same place.
+
 ## Installation
 
 Add this, [Ramda], and [Ramda Adjunct]
