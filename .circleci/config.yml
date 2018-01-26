@@ -23,7 +23,7 @@ references:
             fi
             cat .versions
       - restore_cache:
-          key: yarn-cache-{{ arch }}-
+          key: yarn-cache-{{ arch }}-{{ checksum ".versions" }}-
       - restore_cache:
           key: node-modules-{{ arch }}-{{ checksum ".versions" }}-{{ checksum "yarn.lock" }}
       - restore_cache:
@@ -38,7 +38,7 @@ references:
           name: Install dependencies
           command: yarn install --pure-lockfile
       - save_cache:
-          key: yarn-cache-{{ arch }}-{{ epoch }}
+          key: yarn-cache-{{ arch }}-{{ checksum ".versions" }}-{{ epoch }}
           paths: ~/.yarn-cache
       - save_cache:
           key: node-modules-{{ arch }}-{{ checksum ".versions" }}-{{ checksum "yarn.lock" }}
@@ -105,7 +105,7 @@ workflows:
       - publish:
           filters:
             branches:
-              only: /^(v[0-9]|master)/
+              only: /^(v(er)?\/?[0-9]|master)/
           requires:
             - node
             - node-alpine
