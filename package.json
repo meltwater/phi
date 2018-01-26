@@ -99,7 +99,7 @@
   },
   "peerDependencies": {
     "ramda": ">= 0.19.0 < 0.26",
-    "ramda-adjunct": "^2.2.0"
+    "ramda-adjunct": "^2.4"
   },
   "devDependencies": {
     "@meltwater/examplr": "^3.1.0",
@@ -126,7 +126,7 @@
     "npm-run-all": "^4.1.2",
     "nyc": "^11.0.2",
     "ramda": "^0.25.0",
-    "ramda-adjunct": "~2.2.0",
+    "ramda-adjunct": "^2.4.0",
     "standard": "^10.0.2"
   }
 }
