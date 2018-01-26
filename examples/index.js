@@ -2,10 +2,10 @@ import path from 'path'
 
 import createExamples from '@meltwater/examplr'
 
-import string from './string'
+import nOf from './n-of'
 
 export const examples = {
-  string
+  nOf
 }
 
 const envVars = [

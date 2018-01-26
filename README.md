@@ -35,9 +35,9 @@ $ yarn add ramda ramda-adjunct @meltwater/phi
 **See the complete [API documentation] and [working examples](./examples).**
 
 ```js
-import { isNonEmptyString } from '@meltwater/phi'
+import { nOf } from '@meltwater/phi'
 
-isNonEmptyString('phi') //=> true
+nOfFoo('foo', 5) //=> ['foo', 'foo', 'foo', 'foo', 'foo']
 ```
 
 [API documentation]: https://phi.meltwaterlabs.com

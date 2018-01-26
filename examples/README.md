@@ -29,19 +29,19 @@ $ yarn run example
 Run provided examples with, e.g.,
 
 ```
-$ yarn run example string
+$ yarn run example n-of
 ```
 
 Pass arguments to examples with
 
 ```
-$ yarn run example string false
+$ yarn run example n-of bar 10
 ```
 
 Automatically watch and rerun an example on changes with, e.g.,
 
 ```
-$ yarn run example:watch string
+$ yarn run example:watch n-of
 ```
 
 #### Debugging examples
@@ -49,7 +49,7 @@ $ yarn run example:watch string
 Debug examples with, e.g.,
 
 ```
-$ yarn run example:inspect string
+$ yarn run example:inspect n-of
 ```
 
 For examples which run a single process and then exit,
@@ -66,7 +66,7 @@ export default ({log}) => async () => {
 Automatically watch and rerun a debuggable example on changes with, e.g.,
 
 ```
-$ yarn run example:inspect:watch string
+$ yarn run example:inspect:watch n-of
 ```
 
 ## Writing New Examples
