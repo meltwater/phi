@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.2.0] / 2018-01-25
+
+### Changed
+
+- Update minimum version of ramda-adjunct 2.4.0.
+- Remove `isNonEmptyString` from this package
+  as it is exported through ramda-adjunct.
+
 ## [1.1.2] / 2018-01-25
 
 ### Changed
@@ -49,7 +57,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 [makenew-node-lib]: https://github.com/meltwater/makenew-node-lib
 
-[Unreleased]: https://github.com/meltwater/phi/compare/v1.1.2...HEAD
+[Unreleased]: https://github.com/meltwater/phi/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/meltwater/phi/compare/v1.1.2...v1.2.0
 [1.1.2]: https://github.com/meltwater/phi/compare/v1.1.1...v1.1.2
 [1.1.1]: https://github.com/meltwater/phi/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/meltwater/phi/compare/v1.0.0...v1.1.0
