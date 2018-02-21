@@ -27,16 +27,18 @@
   ],
   "scripts": {
     "test": "nyc ava",
-    "pretest": "gulp lint",
+    "pretest": "npm-run-all lint",
+    "test:update": "ava --update",
+    "lint": "gulp lint",
     "clean": "del dist docs",
     "build": "npm-run-all --parallel build:*",
-    "prebuild": "yarn run clean",
+    "prebuild": "npm-run-all clean",
     "build:index": "babel --source-maps --out-dir dist index.js",
     "build:lib": "babel --source-maps --ignore='*.spec.js' --out-dir dist/lib lib",
     "build:docs": "jsdoc -c jsdoc.json",
-    "dist": "yarn run build",
-    "predist": "yarn test",
-    "preversion": "yarn run dist",
+    "dist": "npm-run-all build",
+    "predist": "npm-run-all test",
+    "preversion": "npm-run-all dist",
     "postversion": "git push && git push --tags",
     "publish:docs": "gulp publish-docs",
     "example": "babel-node examples",
@@ -102,8 +104,8 @@
     "ramda-adjunct": "^2.4"
   },
   "devDependencies": {
-    "@meltwater/examplr": "^3.1.0",
-    "ava": "^0.24.0",
+    "@meltwater/examplr": "^4.1.2",
+    "ava": "^0.25.0",
     "babel-cli": "^6.18.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.1.4",
@@ -127,6 +129,6 @@
     "nyc": "^11.0.2",
     "ramda": "^0.25.0",
     "ramda-adjunct": "^2.4.0",
-    "standard": "^10.0.2"
+    "standard": "^11.0.0"
   }
 }

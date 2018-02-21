@@ -117,12 +117,17 @@ The following environment variables must be set on [CircleCI]:
 
 These may be set manually or by running the script `./circleci/envvars.sh`.
 
+Greenkeeper requires a deployment key with write permission:
+see the [CircleCI documentation for adding one][CircleCI deployment key].
+
 ##### Documentation
 
 For documentation publishing, CircleCI must have an SSH key for `github.com`
-added as a deploy key with write access on the GitHub repository.
+added as a [deploy key][CircleCI deployment key]
+with write access on the GitHub repository.
 
 [CircleCI]: https://circleci.com/
+[CircleCI deployment key]: https://circleci.com/docs/1.0/adding-read-write-deployment-key/
 
 ### Development tasks
 
@@ -144,12 +149,21 @@ $ yarn run dist
 
 ##### Publishing a new release
 
-_Update the CHANGELOG before each new release._
-
 Release a new version using [`npm version`][npm version].
 This will run all tests, update the version number,
 create and push a tagged commit,
 and trigger CircleCI to publish the new version to npm.
+
+- **Update the CHANGELOG before each new release after version 1.**
+- New versions are released when the commit message is a valid version number.
+- Versions are only published on release branches:
+  `master` branch or any branch matching `ver/*`.
+- If branch protection options are enabled,
+  you must first run `npm version` on a separate branch,
+  wait for the commit to pass any required checks,
+  then merge and push the changes to a release branch.
+- **Do not use the GitHub pull request button to merge version commits**
+  as the commit tagged with the new version number will not match after merging.
 
 [npm version]: https://docs.npmjs.com/cli/version
 
@@ -171,7 +185,13 @@ is handled by [gulp].
 View available commands with
 
 ```
-$ yarn run gulp -- --tasks
+$ yarn run gulp --tasks
+```
+
+Run all linters with
+
+```
+$ yarn run lint
 ```
 
 In a separate window, use gulp to watch for changes
@@ -207,6 +227,12 @@ Watch and run tests on changes with
 $ yarn run watch:test
 ```
 
+If using [AVA snapshot testing], update snapshots with
+
+```
+$ yarn run test:update
+```
+
 Generate a coverage report with
 
 ```
@@ -231,6 +257,7 @@ $ yarn run ava:inspect:watch lib/true.spec.js
 ```
 
 [AVA]: https://github.com/avajs/ava
+[AVA snapshot testing]: https://github.com/avajs/ava#snapshot-testing
 [Codecov]: https://codecov.io/
 [Istanbul]: https://istanbul.js.org/
 

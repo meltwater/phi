@@ -9,6 +9,7 @@ Set required and optional configuration options in `examples/local.json`, e.g.,
 ```json
 {
   "logLevel": "info",
+  "logFilter": null,
   "logOutputMode": "short"
 }
 ```
@@ -16,6 +17,7 @@ Set required and optional configuration options in `examples/local.json`, e.g.,
 Override any option with the corresponding environment variable:
 
 - `LOG_LEVEL` (optional)
+- `LOG_FILTER` (optional)
 - `LOG_OUTPUT_MODE` (optional)
 
 ### Running examples with arguments
@@ -131,3 +133,32 @@ $ yarn run example:inspect:watch n-of
    - QUERY_API
    - ...
    ````
+
+## Adding Log Filters
+
+1. Create a new file in `examples` which exports filters, e.g.,
+
+   ```js
+   /* examples/filters.js */
+   // Only print logs with a foo property equal to bar.
+   const onlyFooBar = log => log.foo === 'bar'
+
+   export default {
+     onlyFooBar
+   }
+   ```
+
+2. Import and add filters to `examples/index.js`, e.g.,
+
+   ```js
+   /* examples/index.js */
+   import filters from './filters'
+
+   const { runExample } = createExamples({
+     filters,
+     ...
+   })
+   ```
+
+3. Apply the filter by setting `LOG_FILTER` or `logFilter`,
+   e.g., `LOG_FILTER=onlyFooBar`.

@@ -37,6 +37,13 @@ references:
       - run:
           name: Install dependencies
           command: yarn install --pure-lockfile
+      - run:
+          name: Update lockfile with Greenkeeper
+          command: |
+            if [[ "${GREENKEEPER}" == 'true' ]]; then
+              yarn global add greenkeeper-lockfile@1
+              greenkeeper-lockfile-update
+            fi
       - save_cache:
           key: yarn-cache-{{ arch }}-{{ checksum ".versions" }}-{{ epoch }}
           paths: ~/.yarn-cache
@@ -47,12 +54,22 @@ references:
           key: gh-pages-{{ checksum ".versions" }}-{{ epoch }}
           paths: .gh-pages
       - run:
-          name: Test and build package
+          name: Test package
           command: |
-            if [[ "${PUBLISH}" == 'true' ]]; then
-              yarn run build
-            else
-              yarn run dist
+            if [[ "${TEST_PACKAGE}" == 'true' ]]; then
+              yarn test
+            fi
+      - run:
+          name: Build package
+          command: |
+            if [[ "${BUILD_PACKAGE}" == 'true' ]]; then
+              yarn build
+            fi
+      - run:
+          name: Upload lockfile with Greenkeeper
+          command: |
+            if [[ "${GREENKEEPER}" == 'true' ]]; then
+              greenkeeper-lockfile-upload
             fi
       - run:
           name: Upload coverage to Codecov
@@ -64,32 +81,55 @@ references:
       - deploy:
           name: Publish package
           command: |
-            if [[ "${PUBLISH}" == 'true' ]]; then
+            if [[ "${PUBLISH_PACKAGE}" == 'true' ]]; then
               .circleci/publish.sh
             fi
 
+  filters: &filters
+    filters:
+      branches:
+        ignore: /^greenkeeper\/.*/
+  lockfile: &lockfile
+    requires:
+      - lockfile
+
 jobs:
   node:
+    environment:
+      TEST_PACKAGE: 'true'
     docker:
       - image: node
     <<: *build
   node-alpine:
+    environment:
+      TEST_PACKAGE: 'true'
     docker:
       - image: node:alpine
     <<: *build
   node-carbon:
     environment:
+      TEST_PACKAGE: 'true'
+      BUILD_PACKAGE: 'true'
       COVERAGE: 'true'
     docker:
       - image: node:carbon
     <<: *build
   node-carbon-alpine:
+    environment:
+      TEST_PACKAGE: 'true'
     docker:
       - image: node:carbon-alpine
     <<: *build
   publish:
     environment:
-      PUBLISH: 'true'
+      BUILD_PACKAGE: 'true'
+      PUBLISH_PACKAGE: 'true'
+    docker:
+      - image: node:carbon
+    <<: *build
+  lockfile:
+    environment:
+      GREENKEEPER: 'true'
     docker:
       - image: node:carbon
     <<: *build
@@ -98,16 +138,34 @@ workflows:
   version: 2
   default:
     jobs:
-      - node
-      - node-alpine
-      - node-carbon
-      - node-carbon-alpine
+      - node:
+          <<: *filters
+      - node-alpine:
+          <<: *filters
+      - node-carbon:
+          <<: *filters
+      - node-carbon-alpine:
+          <<: *filters
       - publish:
           filters:
             branches:
-              only: /^(v(er)?\/?[0-9]|master)/
+              only: /^(v(er)?\/?[0-9].*|master)/
           requires:
             - node
             - node-alpine
             - node-carbon
             - node-carbon-alpine
+  greenkeeper:
+    jobs:
+      - lockfile:
+          filters:
+            branches:
+              only: /^greenkeeper\/.*/
+      - node:
+          <<: *lockfile
+      - node-alpine:
+          <<: *lockfile
+      - node-carbon:
+          <<: *lockfile
+      - node-carbon-alpine:
+          <<: *lockfile
