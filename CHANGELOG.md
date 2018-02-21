@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+
+### Changed
+
+- Update to [makenew-node-lib] v4.4.0.
+
 ## [1.2.0] / 2018-01-25
 
 ### Changed
