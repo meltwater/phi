@@ -16,17 +16,16 @@ so they all may be imported from the same place.
 
 ## Installation
 
-Add this, [Ramda], and [Ramda Adjunct]
-as dependencies to your project using [npm] with
+Add this as a dependency to your project using [npm] with
 
 ```
-$ npm install ramda ramda-adjunct @meltwater/phi
+$ npm install @meltwater/phi
 ```
 
 or using [Yarn] with
 
 ```
-$ yarn add ramda ramda-adjunct @meltwater/phi
+$ yarn add @meltwater/phi
 ```
 
 [Ramda]: http://ramdajs.com/
