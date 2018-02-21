@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 
+- (**Breaking**) Renamed `ifEqDefaultTo` to `defaultWhenEquals`.
 - (**Breaking**) Move ramda and ramda-adjunct
   from peerDependencies to dependencies.
 - Update to [makenew-node-lib] v4.4.0.
