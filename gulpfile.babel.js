@@ -1,6 +1,5 @@
 import fs from 'fs'
 import path from 'path'
-import { promisify } from 'util'
 
 import gulp from 'gulp'
 import gulplog from 'gulplog'
@@ -10,8 +9,6 @@ import gulpReplace from 'gulp-replace'
 import gulpStandard from 'gulp-standard'
 import gulpWatch from 'gulp-watch'
 import { publish as ghPagesPublish } from 'gh-pages'
-
-const readFileAsync = promisify(fs.readFile)
 
 const paths = {
   docs: 'docs',
@@ -30,7 +27,7 @@ const paths = {
 }
 
 export const docVersion = async () => {
-  const data = await readFileAsync(
+  const data = await fs.readFileSync(
     path.resolve(__dirname, 'package.json')
   )
   const pkg = JSON.parse(data)
