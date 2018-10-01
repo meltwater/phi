@@ -22,7 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 ### Changed
 
 - Update minimum version of ramda-adjunct to 2.10.0.
-- Update to [makenew-node-lib] v4.5.0.
+- Update to [makenew-node-lib] v5.0.0.
   (Includes building with Babel 7.)
 
 ## [2.3.1] / 2018-07-12
