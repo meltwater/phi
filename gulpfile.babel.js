@@ -42,13 +42,7 @@ export const docVersion = async () => {
 }
 
 export const publishDocs = (done) => {
-  const pkg = JSON.parse(
-    fs.readFileSync(path.resolve(__dirname, 'package.json'))
-  )
-
-  const docs = path.resolve(__dirname, paths.docs, pkg.name)
-
-  ghPagesPublish(docs, {
+  const publish = (docs, pkg, done) => ghPagesPublish(docs, {
     repo: `git@github.com:${pkg.repository}.git`,
     branch: 'gh-pages',
     add: true,
@@ -60,6 +54,19 @@ export const publishDocs = (done) => {
       email: pkg.author.email
     }
   }, done)
+
+  fs.readFile(
+    path.resolve(__dirname, 'package.json'),
+    (err, data) => {
+      if (err) {
+        done(err)
+        return
+      }
+      const pkg = JSON.parse(data)
+      const docs = path.resolve(__dirname, paths.docs, pkg.name)
+      publish(docs, pkg, done)
+    }
+  )
 }
 
 export const standard = () => (
