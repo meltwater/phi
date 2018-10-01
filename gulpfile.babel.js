@@ -62,9 +62,6 @@ export const publishDocs = (done) => {
   }, done)
 }
 
-gulp.task('publish-docs', ['doc-version'], (done) => {
-})
-
 export const standard = () => (
   gulp.src(paths.scripts)
     .pipe(gulpStandard())
@@ -110,6 +107,11 @@ export const lint = gulp.parallel(
 export const watch = gulp.parallel(
   watchJson,
   watchScripts
+)
+
+export const docs = gulp.series(
+  docVersion,
+  publishDocs
 )
 
 export default gulp.series(

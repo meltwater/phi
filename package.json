@@ -44,7 +44,7 @@
     "predist": "npm-run-all test",
     "preversion": "npm-run-all dist",
     "postversion": "git push && git push --tags",
-    "publish:docs": "gulp publish-docs",
+    "publish:docs": "gulp docs",
     "example": "babel-node examples",
     "example:watch": "nodemon --exec babel-node examples",
     "example:inspect": "babel-node --inspect examples",
