@@ -130,7 +130,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 [makenew-node-lib]: https://github.com/meltwater/makenew-node-lib
 
-[Unreleased]: https://github.com/meltwater/phi/compare/v2.5.0...HEAD
+[Unreleased]: https://github.com/meltwater/phi/compare/v2.6.0...HEAD
+[2.6.0]: https://github.com/meltwater/phi/compare/v2.5.0...v2.6.0
 [2.5.0]: https://github.com/meltwater/phi/compare/v2.4.2...v2.5.0
 [2.4.2]: https://github.com/meltwater/phi/compare/v2.4.1...v2.4.2
 [2.4.1]: https://github.com/meltwater/phi/compare/v2.4.0...v2.4.1
