@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [2.7.1] / 2018-12-20
+
+### Fixed
+
+- Revert to previous ramda and ramda-adjunct versions.
+  - Cannot use ramda to 0.26.1 and ramda-adjunct to 2.13.0
+    as long as they both export `then`.
+
 ## [2.7.0] / 2018-12-20
 
 ### Changed
@@ -138,7 +146,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 [makenew-node-lib]: https://github.com/meltwater/makenew-node-lib
 
-[Unreleased]: https://github.com/meltwater/phi/compare/v2.7.0...HEAD
+[Unreleased]: https://github.com/meltwater/phi/compare/v2.7.1...HEAD
+[2.7.1]: https://github.com/meltwater/phi/compare/v2.7.0...v2.7.1
 [2.7.0]: https://github.com/meltwater/phi/compare/v2.6.0...v2.7.0
 [2.6.0]: https://github.com/meltwater/phi/compare/v2.5.0...v2.6.0
 [2.5.0]: https://github.com/meltwater/phi/compare/v2.4.2...v2.5.0
