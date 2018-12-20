@@ -135,6 +135,13 @@ workflows:
           tag: alpine
           is_alpine: true
       - test:
+          name: test-dubnium
+          tag: dubnium
+      - test:
+          name: test-dubnium-alpine
+          tag: dubnium-alpine
+          is_alpine: true
+      - test:
           name: test-carbon
           tag: carbon
           upload_coverage: true
@@ -149,5 +156,7 @@ workflows:
           requires:
             - test-latest
             - test-latest-alpine
+            - test-dubnium
+            - test-dubnium-alpine
             - test-carbon
             - test-carbon-alpine
