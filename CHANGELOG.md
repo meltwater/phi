@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [2.7.0] / 2018-12-20
+
+### Changed
+
+- Update minimum version of ramda to 0.26.1.
+- Update minimum version of ramda-adjunct to 2.13.0.
+- Update to [makenew-node-lib] v5.3.1.
+
 ## [2.6.0] / 2018-11-12
 
 ### Added
@@ -130,7 +138,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 [makenew-node-lib]: https://github.com/meltwater/makenew-node-lib
 
-[Unreleased]: https://github.com/meltwater/phi/compare/v2.6.0...HEAD
+[Unreleased]: https://github.com/meltwater/phi/compare/v2.7.0...HEAD
+[2.7.0]: https://github.com/meltwater/phi/compare/v2.6.0...v2.7.0
 [2.6.0]: https://github.com/meltwater/phi/compare/v2.5.0...v2.6.0
 [2.5.0]: https://github.com/meltwater/phi/compare/v2.4.2...v2.5.0
 [2.4.2]: https://github.com/meltwater/phi/compare/v2.4.1...v2.4.2
