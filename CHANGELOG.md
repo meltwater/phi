@@ -11,8 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 - Update minimum version of ramda to 0.26.1.
   - (*Breaking*) Swapped meaning of `mergeLeft` and `mergeRight`.
-    Update all use of `mergeRight` with `mergeLeft`
-    and `merge` or `mergeLeft` with `mergeRight`.
+    Update all use of `mergeRight` with `mergeLeft` and
+    update all use of `merge` or `mergeLeft` with `mergeRight`.
 - Update minimum version of ramda-adjunct to 2.13.0.
 
 ## [2.7.1] / 2018-12-20
