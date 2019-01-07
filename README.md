@@ -1,6 +1,7 @@
 # φ
 
 [![npm](https://img.shields.io/npm/v/@meltwater/phi.svg)](https://www.npmjs.com/package/@meltwater/phi)
+[![github](https://img.shields.io/badge/github-repo-blue.svg)](https://github.com/meltwater/phi)
 [![docs](https://img.shields.io/badge/docs-latest-green.svg)](https://phi.meltwaterlabs.com)
 [![Codecov](https://img.shields.io/codecov/c/github/meltwater/phi.svg)](https://codecov.io/gh/meltwater/phi)
 [![CircleCI](https://img.shields.io/circleci/project/github/meltwater/phi.svg)](https://circleci.com/gh/meltwater/phi)
