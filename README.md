@@ -38,8 +38,14 @@ $ yarn add @meltwater/phi
 **See the complete [API documentation] and [working examples](./examples).**
 
 ```js
-import { nOf } from '@meltwater/phi'
+import {
+  prop, // from Ramda
+  isNil, // from Ramda Adjunct
+  nOf // from Phi
+} from '@meltwater/phi'
 
+prop('foo', { foo: 'bar' }) //=> 'bar'
+isNil({}) //=> false
 nOfFoo('foo', 5) //=> ['foo', 'foo', 'foo', 'foo', 'foo']
 ```
 
