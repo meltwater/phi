@@ -46,7 +46,7 @@ import {
 
 prop('foo', { foo: 'bar' }) //=> 'bar'
 isNil({}) //=> false
-nOfFoo('foo', 5) //=> ['foo', 'foo', 'foo', 'foo', 'foo']
+nOf('foo', 5) //=> ['foo', 'foo', 'foo', 'foo', 'foo']
 ```
 
 [API documentation]: https://phi.meltwaterlabs.com
