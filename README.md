@@ -7,6 +7,10 @@
 [![CircleCI](https://img.shields.io/circleci/project/github/meltwater/phi.svg)](https://circleci.com/gh/meltwater/phi)
 
 Functional tools for JavaScript inspired by [Ramda] and [Ramda Adjunct].
+Plays well with [τ][Tau].
+
+[Luxon]: https://moment.github.io/luxon/
+[Tau]: https://tau.meltwaterlabs.com/
 
 [Ramda]: https://ramdajs.com/
 [Ramda Adjunct]: https://char0n.github.io/ramda-adjunct
