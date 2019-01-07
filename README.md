@@ -7,7 +7,7 @@
 
 Functional tools for JavaScript inspired by [Ramda] and [Ramda Adjunct].
 
-[Ramda]: http://ramdajs.com/
+[Ramda]: https://ramdajs.com/
 [Ramda Adjunct]: https://char0n.github.io/ramda-adjunct
 
 ## Description
