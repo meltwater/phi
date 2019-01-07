@@ -14,7 +14,7 @@
   "homepage": "https://github.com/meltwater/phi",
   "bugs": "https://github.com/meltwater/phi/issues",
   "repository": "meltwater/phi",
-  "license": "SEE LICENSE IN LICENSE.txt",
+  "license": "Apache-2.0",
   "author": {
     "name": "Evan Sosenko",
     "email": "evan.sosenko@meltwater.com"
