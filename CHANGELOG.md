@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [3.4.1] / 2019-08-17
+
+### Fixed
+
+- Export missing `assocWith` and `assocPathWith`.
+
 ## [3.4.0] / 2019-08-15
 
 ### Added
@@ -190,7 +196,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 [makenew-node-lib]: https://github.com/meltwater/makenew-node-lib
 
-[Unreleased]: https://github.com/meltwater/phi/compare/v3.4.0...HEAD
+[Unreleased]: https://github.com/meltwater/phi/compare/v3.4.1...HEAD
+[3.4.1]: https://github.com/meltwater/phi/compare/v3.4.0...v3.4.1
 [3.4.0]: https://github.com/meltwater/phi/compare/v3.3.0...v3.4.0
 [3.3.0]: https://github.com/meltwater/phi/compare/v3.2.0...v3.3.0
 [3.2.0]: https://github.com/meltwater/phi/compare/v3.1.0...v3.2.0
