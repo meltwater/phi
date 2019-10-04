@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- `fromNdjson` and `toNdjson`.
+
 ### Changed
 
 - Update minimum version of ramda-adjunct to 2.21.0.
