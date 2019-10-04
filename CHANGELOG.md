@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Added
 
+- `fromJson` and `toJson`.
 - `fromNdjson` and `toNdjson`.
 
 ### Changed
