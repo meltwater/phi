@@ -8,6 +8,7 @@ export const examples = {
   nOf
 }
 
+// prettier-ignore
 const envVars = [
   'LOG_LEVEL',
   'LOG_FILTER',
