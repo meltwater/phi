@@ -111,7 +111,7 @@
   },
   "dependencies": {
     "ramda": "~0.27.0",
-    "ramda-adjunct": "~2.25.0"
+    "ramda-adjunct": "~2.26.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
