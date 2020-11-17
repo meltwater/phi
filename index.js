@@ -446,6 +446,8 @@ export {
   thenCatchP,
   thenP,
   toArray,
+  toInteger32,
+  toUinteger32,
   trimCharsEnd,
   trimCharsStart,
   trimEnd,
