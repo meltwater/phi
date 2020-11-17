@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 ### Changed
 
 - Update minimum version of ramda-adjunct to 2.28.0.
+- License to MIT.
 
 ## [3.8.0] / 2020-06-17
 
