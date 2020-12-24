@@ -2,6 +2,7 @@
   "name": "@meltwater/phi",
   "version": "3.10.0",
   "description": "Functional tools for JavaScript inspired by Ramda and Ramda Adjunct.",
+  "type": "module",
   "main": "dist/index.js",
   "module": "index.js",
   "sideEffects": false,
@@ -37,18 +38,18 @@
     "clean": "del dist docs",
     "build": "npm-run-all --parallel build:*",
     "prebuild": "npm-run-all clean",
-    "build:index": "babel --source-maps --out-dir dist index.js",
-    "build:lib": "babel --source-maps --ignore='**/*.spec.js' --out-dir dist/lib lib",
+    "build:index": "babel --source-maps --out-file-extension .cjs --out-dir dist index.js",
+    "build:lib": "babel --source-maps --ignore='**/*.spec.js' --out-file-extension .cjs --out-dir dist/lib lib",
     "build:docs": "jsdoc -c jsdoc.json",
     "dist": "npm-run-all build",
     "predist": "npm-run-all test",
     "preversion": "npm-run-all dist",
     "postversion": "git push && git push --tags",
     "publish:docs": "gulp docs",
-    "example": "babel-node examples",
-    "example:watch": "nodemon --exec babel-node examples",
-    "example:inspect": "babel-node --inspect examples",
-    "example:inspect:watch": "nodemon --exec babel-node --inspect examples",
+    "example": "node examples",
+    "example:watch": "nodemon examples",
+    "example:inspect": "node --inspect examples",
+    "example:inspect:watch": "nodemon --inspect examples",
     "watch": "gulp watch",
     "pretty": "prettier --ignore-path .gitignore --write '**/*.(js|json|graphql)'",
     "format": "npm-run-all --serial pretty format:*",
@@ -56,6 +57,12 @@
     "report": "nyc report"
   },
   "babel": {
+    "plugins": [
+      [
+        "babel-plugin-add-import-extension",
+        { "extension": "cjs", "replace": true }
+      ]
+    ],
     "presets": [
       [
         "@babel/preset-env",
@@ -72,9 +79,6 @@
       "**/*.spec.js",
       "!dist/**/*",
       "!package/**/*"
-    ],
-    "require": [
-      "@babel/register"
     ]
   },
   "nyc": {
@@ -107,7 +111,7 @@
     "endOfLine": "lf"
   },
   "engines": {
-    "node": ">=10.13.0"
+    "node": ">=12.13.0"
   },
   "resolutions": {
     "eslint": "^7.12.1",
@@ -122,9 +126,9 @@
     "@babel/core": "^7.0.1",
     "@babel/node": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
-    "@babel/register": "^7.0.0",
     "@meltwater/examplr": "^5.0.0",
     "ava": "^3.3.0",
+    "babel-plugin-add-import-extension": "^1.4.3",
     "del-cli": "^3.0.0",
     "docdash": "^1.0.0",
     "eslint": "^7.12.1",
