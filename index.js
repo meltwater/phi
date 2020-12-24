@@ -465,4 +465,3 @@ export {
   zipObjWith
 } from 'ramda-adjunct'
 export * from './lib/index.js'
-export { default } from './lib/default.js'
