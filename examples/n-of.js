@@ -1,4 +1,4 @@
-import { nOf } from '../lib'
+import { nOf } from '../index.js'
 
 export default ({ log }) => (x = 'foo', n = 5) => {
   const num = parseInt(n)
