@@ -1,10 +1,8 @@
 import path from 'path'
 
-import examplr from '@meltwater/examplr'
+import { createExamples } from '@meltwater/examplr'
 
 import nOf from './n-of.js'
-
-const { createExamples } = examplr
 
 export const examples = {
   nOf
