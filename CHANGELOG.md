@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [4.0.0] / 2020-12-24
+
+### Added
+
+- Publish as both ES and CommonJS module.
+
+### Changed
+
+- (**Breaking**) Use Conditional Exports to provide ES or CommonJS module.
+  Cannot import or require internal paths.
+
+### Removed
+
+- (**Breaking**) The `default` export.
+
 ## [3.10.0] / 2020-12-23
 
 ### Changed
@@ -255,7 +270,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 [makenew-node-lib]: https://github.com/meltwater/makenew-node-lib
 
-[Unreleased]: https://github.com/meltwater/phi/compare/v3.10.0...HEAD
+[Unreleased]: https://github.com/meltwater/phi/compare/v4.0.0...HEAD
+[4.0.0]: https://github.com/meltwater/phi/compare/v3.10.0...v4.0.0
 [3.10.0]: https://github.com/meltwater/phi/compare/v3.9.1...v3.10.0
 [3.9.1]: https://github.com/meltwater/phi/compare/v3.9.0...v3.9.1
 [3.9.0]: https://github.com/meltwater/phi/compare/v3.8.0...v3.9.0
