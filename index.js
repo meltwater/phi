@@ -1,3 +1,6 @@
+import ramda from 'ramda'
+const { on, splitWhenever, whereAny } = ramda
+export { on, splitWhenever, whereAny }
 export {
   F,
   T,
@@ -149,7 +152,6 @@ export {
   objOf,
   of,
   omit,
-  on,
   once,
   or,
   otherwise,
@@ -200,7 +202,6 @@ export {
   splitAt,
   splitEvery,
   splitWhen,
-  splitWhenever,
   startsWith,
   subtract,
   sum,
@@ -245,7 +246,6 @@ export {
   view,
   when,
   where,
-  whereAny,
   whereEq,
   without,
   xor,
@@ -464,5 +464,5 @@ export {
   weaveLazy,
   zipObjWith
 } from 'ramda-adjunct'
-export * from './index.js'
+export * from './lib/index.js'
 export { default } from './lib/default.js'
