@@ -464,5 +464,5 @@ export {
   weaveLazy,
   zipObjWith
 } from 'ramda-adjunct'
-export * from './lib.js'
+export * from './index.js'
 export { default } from './lib/default.js'
