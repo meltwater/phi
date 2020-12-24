@@ -3,7 +3,11 @@
   "version": "4.0.0-alpha.2",
   "description": "Functional tools for JavaScript inspired by Ramda and Ramda Adjunct.",
   "type": "module",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
+  "exports": {
+    "import": "./index.js",
+    "require": "./dist/index.cjs"
+  },
   "module": "index.js",
   "sideEffects": false,
   "keywords": [
