@@ -1,6 +1,6 @@
 {
   "name": "@meltwater/phi",
-  "version": "3.10.0",
+  "version": "4.0.0-alpha.0",
   "description": "Functional tools for JavaScript inspired by Ramda and Ramda Adjunct.",
   "type": "module",
   "main": "dist/index.js",
@@ -60,7 +60,10 @@
     "plugins": [
       [
         "babel-plugin-add-import-extension",
-        { "extension": "cjs", "replace": true }
+        {
+          "extension": "cjs",
+          "replace": true
+        }
       ]
     ],
     "presets": [
