@@ -57,7 +57,7 @@ export const publishDocs = (done) => {
       return
     }
     const pkg = JSON.parse(data)
-    const docs = path.resolve(__dirname, paths.docs, pkg.name)
+    const docs = path.resolve(paths.docs, pkg.name)
     publish(docs, pkg, done)
   })
 }
