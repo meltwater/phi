@@ -1,6 +1,6 @@
 {
   "name": "@meltwater/phi",
-  "version": "4.0.0-alpha.1",
+  "version": "4.0.0-alpha.2",
   "description": "Functional tools for JavaScript inspired by Ramda and Ramda Adjunct.",
   "type": "module",
   "main": "dist/index.js",
