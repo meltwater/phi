@@ -1,6 +1,6 @@
 import ramda from 'ramda'
-const { on, splitWhenever, whereAny } = ramda
-export { on, splitWhenever, whereAny }
+const { on, splitWhenever, then, whereAny } = ramda
+export { on, splitWhenever, then, whereAny }
 export {
   F,
   T,
@@ -457,7 +457,6 @@ export {
   stubString,
   stubUndefined,
   subtractNum,
-  then,
   thenCatchP,
   thenP,
   toArray,
