@@ -5980,10 +5980,10 @@ quick-lru@^5.1.1:
   resolved "https://registry.yarnpkg.com/quick-lru/-/quick-lru-5.1.1.tgz#366493e6b3e42a3a6885e2e99d18f80fb7a8c932"
   integrity sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==
 
-ramda-adjunct@~2.29.0:
-  version "2.29.0"
-  resolved "https://registry.yarnpkg.com/ramda-adjunct/-/ramda-adjunct-2.29.0.tgz#64925507686561e2d64ecbb1d8e4dacf39972c22"
-  integrity sha512-hhpy/Uo4J0dePqNvLadtUuk/1ns95YC9cZARJUgak1o3JSAAkdalVrniX7eQPtcUQDp5LYO3Jx58WbqBJYA+aA==
+ramda-adjunct@~2.33.0:
+  version "2.33.0"
+  resolved "https://registry.yarnpkg.com/ramda-adjunct/-/ramda-adjunct-2.33.0.tgz#3dfbfddaa2582df0ce8d6f8e6707e37d7c22331c"
+  integrity sha512-TwNW9uTDyuOHF8stDLcD+rg9evY4/D7poF/CZZ3ZSI1wIk56jqvwFL7xYbHyvd/wQpRzPbT2oiwsot2VoFmodA==
 
 ramda@~0.27.1:
   version "0.27.1"
