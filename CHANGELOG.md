@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [4.1.0] / 2021-08-20
+
+### Changed
+
+- Update ramda-adjunct to v2.33.0.
+
 ## [4.0.0] / 2020-12-24
 
 ### Added
@@ -271,7 +277,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 [makenew-node-lib]: https://github.com/meltwater/makenew-node-lib
 
-[Unreleased]: https://github.com/meltwater/phi/compare/v4.0.0...HEAD
+[Unreleased]: https://github.com/meltwater/phi/compare/v4.1.0...HEAD
+[4.1.0]: https://github.com/meltwater/phi/compare/43.0.0...v4.1.0
 [4.0.0]: https://github.com/meltwater/phi/compare/v3.10.0...v4.0.0
 [3.10.0]: https://github.com/meltwater/phi/compare/v3.9.1...v3.10.0
 [3.9.1]: https://github.com/meltwater/phi/compare/v3.9.0...v3.9.1
