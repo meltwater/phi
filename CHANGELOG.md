@@ -9,8 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
-- Update ramda to v3.0.0
-- Update ramda-adjunct to v3.0.0
+- Update ramda to v3.0.0.
+- Update ramda-adjunct to v3.0.0.
 
 ## [4.1.0] / 2021-08-20
 
