@@ -125,8 +125,8 @@
     "standard": "^16.0.2"
   },
   "dependencies": {
-    "ramda": "~0.27.1",
-    "ramda-adjunct": "~2.33.0"
+    "ramda": "~0.28.0",
+    "ramda-adjunct": "~3.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
